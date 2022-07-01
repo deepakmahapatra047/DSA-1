@@ -1,0 +1,47 @@
+public class Main {
+
+	public static void main(String[] args) {int [] a={1,5,7,3,10,5,3,2};
+
+int k=33;
+
+Sum(a,k);
+
+	}
+
+	
+
+public static void Sum(int [] a,int k){
+
+int n=a.length;
+
+int j=0;
+
+int Csum=0;
+
+for(int i=0; i<n; i++ ){
+
+	Csum+=a[i];	
+
+if(Csum>k){
+
+Csum-=a[j];
+
+	j++;
+
+}
+
+if(Csum==k){
+
+	System.out.print(j+" "+i);
+
+	System.out.println();
+
+}
+
+}
+
+}
+
+	
+
+}
