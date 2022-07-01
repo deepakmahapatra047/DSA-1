@@ -1,0 +1,71 @@
+public class Main {
+
+	public static void main(String[] args) {
+
+int [] a={1,5,6,7,9};
+
+int [] b={2,4,6,8};
+
+int m=a.length;
+
+int n=b.length;
+
+int p=m+n;
+
+int [] c= new int[p];
+
+int i=0,j=0,k=0;
+
+while(i<m && j<n){
+
+	if(a[i]<=b[j]){
+
+		c[k]=a[i];
+
+		i++;
+
+	}
+
+	else{
+
+		c[k]=b[j];
+
+		j++;
+
+	}
+
+	k++;
+
+}
+
+while(i<m){
+
+	c[k]=a[i];
+
+	i++;
+
+	k++;
+
+}
+
+while(j<n){
+
+	c[k]=b[j];
+
+	j++;
+
+	k++;
+
+}
+
+for(int t=0; t<p; t++){
+
+	System.out.print(c[t]+" ");
+
+}
+
+	
+
+	}
+
+}
