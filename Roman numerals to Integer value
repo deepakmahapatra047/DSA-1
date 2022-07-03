@@ -22,6 +22,6 @@ for(int i=s.length()-2; i>=0; i--){
 	res+=map.get(s.charAt(i));
 }
 
-return res;
+System.out.print( res);
 	}
 }
