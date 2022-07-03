@@ -1,0 +1,28 @@
+public class Main {
+	public static void main(String[] args) {
+int [] a={1,4,6,9,15,17,20};
+
+int low=0;
+int high=a.length-1;
+System.out.print(binarySearch(a,9,low,high));
+
+	}
+
+public static int binarySearch(int [] a, int key, int low , int high){
+	
+if(low>high)
+	return -1;
+
+
+int mid=(low+high)/2;
+if(a[mid]==key){
+	return mid;
+}
+if(a[mid]>key){
+	return binarySearch(a,key,low,mid-1);
+}
+
+	return binarySearch(a,key,mid+1,high);
+
+}
+}
