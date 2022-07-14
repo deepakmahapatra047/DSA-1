@@ -90,9 +90,9 @@ public class Main {
 
 	    }
 
-	    for(int m=start, n=0; n<brr.length; m++,n++){
+	    for(int m=0; m<brr.length; m++){
 
-	        arr[m]=brr[n];
+	        arr[start+m]=brr[m];
 
 	    }
 
