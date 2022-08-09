@@ -1,0 +1,43 @@
+/*package whatever //do not write package name here */
+
+import java.io.*;
+import java.util.*;
+class GFG {
+	public static void main (String[] args) {
+	
+	int mat[][] = {{0, 6, 8, 9, 11},
+                       {20, 22, 28, 29, 31},
+                       {36, 38, 50, 61, 63},
+                       {64, 66, 100, 122, 128}};
+    
+    System.out.print(Arrays.toString(binarySearch(mat,28)));
+
+	}
+	
+	public static int[] binarySearch(int[][] arr, int target){
+	    
+	    int r=0;
+	    int c=arr.length-1;
+	    
+	    while(r<arr.length && c>=0){
+	        if(arr[r][c]==target){
+	            return new int[]{r,c};
+	        }
+	        
+	        if(arr[r][c]<target){
+	            r++;
+	        }
+	        else{
+	            c--;
+	        }
+	        
+	        
+	    }
+	    
+	    return new int[]{-1,-1};
+	    
+	}
+	
+	
+	
+}
