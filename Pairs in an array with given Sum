@@ -11,6 +11,9 @@ class GFG {
 	int low=0;
 	int high=arr.length-1;
 	
+pairSum(arr,low,high,k);
+	}
+	public static void pairSum(int[]arr,int low,int high,int k){
 	while(low<high){
 	    if((arr[low]+arr[high])==k){
 	        System.out.println(arr[low]+" "+arr[high]);
@@ -21,16 +24,16 @@ class GFG {
 	    else if((arr[low]+arr[high])>k){
 	        high--;
 	    }
-	    else if((arr[low]+arr[high])<k){
+	    else {
 	        low++;
 	    }
-	    else{
-	        System.out.print("No such pair present");
-	    }
+	}
+	    
+	        System.out.print("No more pair present");
     
 	    
 	}
 	
 	
-	}
+	
 }
