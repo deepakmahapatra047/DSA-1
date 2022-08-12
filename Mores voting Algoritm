@@ -1,0 +1,55 @@
+class Solution
+{
+    static int majorityElement(int a[], int size)
+    {
+       
+       int maxElement=maxFreq(a);
+       
+      
+      
+      return maxElement;
+       
+       
+       
+       
+    }
+    
+    public static int maxFreq(int []arr){
+        int max_idx=0;
+        int count=1;
+        int n=arr.length;
+        
+        for(int i=1; i<n;i++){
+            if(arr[i]==arr[max_idx]){
+                count++;
+                
+            }
+            else{
+                count--;
+            }
+            if(count==0){
+                max_idx=i;
+                count=1;
+            }
+            
+        }
+        
+        int c=0;
+        
+        for(int i=0;i<n;i++){
+            if(arr[i]==arr[max_idx]){
+                c++;
+            }
+        
+        }
+        
+        if(c>n/2){
+            return arr[max_idx];
+        }
+        
+        
+        
+        
+        return -1;
+    }
+}
