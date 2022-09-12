@@ -18,7 +18,7 @@ class GFG {
 	}
 	
 	public static int partition(int[]arr,int low,int high){
-	    int j=arr[high];
+	
 	    int idx=low;
 	    
 	    for (int i=low;i<=high ;i++ ){
@@ -51,7 +51,5 @@ class GFG {
 	    
 	  return kthSmallest(arr,low, part-1, k);  
 	}
-	
-	
 	
 }
